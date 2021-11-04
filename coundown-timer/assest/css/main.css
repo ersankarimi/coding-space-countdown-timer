@@ -1,0 +1,42 @@
+body {
+  color: #2C4A64;
+}
+
+.container-fluid {
+  background-image: url("../img/bg-wallpaper.jpg");
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+#months-left,
+#seconds-left,
+#hours-left,
+#days-left,
+#minutes-left {
+  font-size: 5rem;
+}
+
+.countdown-text {
+  font-size: 2.5rem;
+}
+
+.new-year-text {
+  font-size: 4rem;
+}
+
+.text-desc {
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=main.css.map */
