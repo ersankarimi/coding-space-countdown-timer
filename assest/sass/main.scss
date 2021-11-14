@@ -32,3 +32,26 @@ body {
 .text-desc {
     font-size: 1.5rem;
 }
+
+@media (max-width: 568px) {
+
+    .countdown-text {
+        font-size: 2rem;
+    }
+
+    .new-year-text {
+        font-size: 3rem;
+    }
+
+    .text-desc {
+        font-size: 1rem;
+    }
+
+    #months-left,
+    #seconds-left,
+    #hours-left,
+    #days-left,
+    #minutes-left {
+        font-size: 3rem;
+    }
+}

@@ -12,11 +12,11 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
 }
 
@@ -40,4 +40,22 @@ body {
   font-size: 1.5rem;
 }
 
+@media (max-width: 568px) {
+  .countdown-text {
+    font-size: 2rem;
+  }
+  .new-year-text {
+    font-size: 3rem;
+  }
+  .text-desc {
+    font-size: 1rem;
+  }
+  #months-left,
+  #seconds-left,
+  #hours-left,
+  #days-left,
+  #minutes-left {
+    font-size: 3rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
