@@ -1,44 +1,41 @@
 // variabel element selector
-const months = document.querySelector("#months-left")
-const days = document.querySelector("#days-left")
-const hours = document.querySelector("#hours-left")
-const minutes = document.querySelector("#minutes-left")
-const seconds = document.querySelector("#seconds-left")
-
-// final date
-const finalDate = new Date("Jan 1, 2022 00:00:00")
-console.log(finalDate.getTime());
+const months = document.querySelector('#months-left')
+const days = document.querySelector('#days-left')
+const hours = document.querySelector('#hours-left')
+const minutes = document.querySelector('#minutes-left')
+const seconds = document.querySelector('#seconds-left')
 
 // funtion to get current date
 const currentDate = setInterval(() => {
-    const currentDate = new Date()
+	//days
+	const diffDays =
+		new Date(
+			new Date().getFullYear(),
+			new Date().getMonth() + 1,
+			0
+		).getDate() - new Date(new Date().getTime()).getDate()
 
-    // search diff between 2 dates
-    const diffDate = finalDate.getTime() - currentDate.getTime()
+	// months
+	// const diffMonths = Math.floor(diffDays / 31)
+	const diffMonths = Math.floor(
+		new Date(new Date().getFullYear(), 11).getMonth() +
+			1 -
+			(new Date(new Date().getTime()).getMonth() + 1)
+	)
 
-    // search months, days, hours, minutes, seconds diff
+	// hours
+	const diffHours = Math.floor(24 - new Date().getHours() - 1)
 
-    //days
-    const diffDays = Math.floor(diffDate / 86400000)
+	// minutes
+	const diffMinutes = Math.floor(60 - new Date().getMinutes() - 1)
 
+	// seconds
+	const diffSeconds = Math.floor(60 - new Date().getSeconds() - 1)
 
-    // months
-    const diffMonths = Math.floor(diffDays / 31);
-
-    // hours
-    const diffHours = Math.floor(diffDate % 86400000 / 3600000)
-
-    // minutes
-    const diffMinutes = Math.floor(diffDate % 3600000 / 60000)
-
-    // seconds
-    const diffSeconds = Math.floor(diffDate % 60000 / 1000)
-
-    // set to display
-    days.innerText = diffDays - (31 * diffMonths)
-    months.innerText = diffMonths
-    hours.innerText = diffHours
-    minutes.innerText = diffMinutes
-    seconds.innerText = diffSeconds
-
-}, 1000);
+	// set to display
+	days.innerText = diffDays
+	months.innerText = diffMonths
+	hours.innerText = diffHours
+	minutes.innerText = diffMinutes
+	seconds.innerText = diffSeconds
+}, 1000)
